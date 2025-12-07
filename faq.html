@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | FloCare - Frequently Asked Questions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        .faq-hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--light-purple) 100%);
+            text-align: center;
+        }
+        
+        .faq-hero h1 {
+            font-size: 3.2rem;
+            color: var(--primary-purple);
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-color);
+        }
+        
+        .faq-container {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .faq-category {
+            margin-bottom: 60px;
+        }
+        
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            color: var(--primary-purple);
+        }
+        
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-purple);
+            color: var(--primary-purple);
+            font-size: 1.2rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: var(--border-radius-sm);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid var(--medium-gray);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background-color: var(--white);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--dark-gray);
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .faq-question.active {
+            background-color: var(--light-purple);
+            color: var(--primary-purple);
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: var(--white);
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+            border-top: 1px solid var(--medium-gray);
+        }
+        
+        .faq-answer p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .faq-answer ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        .faq-answer li::before {
+            content: '•';
+            color: var(--primary-purple);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .need-help {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+        
+        .need-help h2 {
+            color: var(--primary-purple);
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+        
+        .need-help p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--text-light);
+        }
+        
+        @media (max-width: 768px) {
+            .faq-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .category-title h2 {
+                font-size: 1.5rem;
+            }
+            
+            .faq-question {
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Flo<span>Care</span></h1>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="periodcalc.html" class="nav-link">Period Calculator</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link active">FAQ</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FAQ Hero -->
+    <section class="faq-hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about FloCare products, usage, and menstrual health. Can't find what you're looking for? Contact our support team.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Container -->
+    <section class="faq-container">
+        <div class="container">
+            <!-- Product Questions -->
+            <div class="faq-category">
+                <div class="category-title">
+                    <div class="category-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h2>Product Questions</h2>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What makes FloCare pads different from regular pads?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>FloCare pads are specifically designed for women with heavy flow and special needs like PCOS, fibroids, and postpartum recovery. Key differences include:</p>
+                            <ul>
+                                <li>Extra sticky and longer wings for secure fit</li>
+                                <li>Made with 100% pure cotton for sensitive skin</li>
+                                <li>Longer lengths (320mm night, 300mm day) for better coverage</li>
+                                <li>Enhanced absorption for heavy flow</li>
+                                <li>Non-irritant and hypoallergenic materials</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Which FloCare product is right for me?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Choosing the right product depends on your flow and needs:</p>
+                            <ul>
+                                <li><strong>Night Wear (320mm):</strong> For heavy flow days, overnight protection, postpartum recovery, or conditions like fibroids/PCOS</li>
+                                <li><strong>Day Wear (300mm):</strong> For medium to heavy daily flow, work or school days</li>
+                                <li><strong>Panty Liners (180mm):</strong> For light flow days, everyday freshness, or as backup protection</li>
+                            </ul>
+                            <p>You can also use our <a href="periodcalc.html">Period Calculator</a> for personalized recommendations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Are FloCare pads really 100% leak-free?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Our pads feature:</p>
+                            <ul>
+                                <li>Extra-long wings that wrap securely around your underwear</li>
+                                <li>Advanced absorption layers that lock in moisture</li>
+                                <li>Leak-proof barriers on all sides</li>
+                                <li>Secure adhesive that keeps the pad in place</li>
+                            </ul>
+                            <p>When used as directed (changing every 4-8 hours depending on flow), FloCare provides 100% leak-free protection.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Why are FloCare pads made with pure cotton?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We use 100% pure cotton because:</p>
+                            <ul>
+                                <li>It's naturally breathable, reducing moisture and irritation</li>
+                                <li>It's hypoallergenic and safe for sensitive skin</li>
+                                <li>It doesn't contain synthetic materials that can cause rashes</li>
+                                <li>It's soft and comfortable against the skin</li>
+                                <li>It's biodegradable and more environmentally friendly than synthetic alternatives</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Usage & Care -->
+            <div class="faq-category">
+                <div class="category-title">
+                    <div class="category-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h2>Usage & Care</h2>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How often should I change my FloCare pad?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Change frequency depends on your flow:</p>
+                            <ul>
+                                <li><strong>Heavy flow:</strong> Change every 4-6 hours</li>
+                                <li><strong>Medium flow:</strong> Change every 6-8 hours</li>
+                                <li><strong>Light flow:</strong> Change every 8 hours or as needed</li>
+                                <li><strong>Night Wear:</strong> Can provide up to 8 hours of protection</li>
+                            </ul>
+                            <p>Always change your pad when it feels full or uncomfortable, and never wear the same pad for more than 8 hours.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I use FloCare pads overnight?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! Our Night Wear pads (320mm) are specifically designed for overnight use. Features include:</p>
+                            <ul>
+                                <li>Extra length (320mm) for full coverage while lying down</li>
+                                <li>Maximum absorption capacity for up to 8 hours</li>
+                                <li>Secure wings that prevent shifting during sleep</li>
+                                <li>Soft materials that stay comfortable all night</li>
+                            </ul>
+                            <p>For heavy flow, we recommend changing right before bed and immediately upon waking.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Are FloCare pads suitable for postpartum use?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, FloCare pads are excellent for postpartum recovery because:</p>
+                            <ul>
+                                <li>They're made with pure cotton, which is gentle on sensitive postpartum skin</li>
+                                <li>Night Wear pads provide maximum absorption for postpartum bleeding (lochia)</li>
+                                <li>The extra-long wings provide secure fit without irritating C-section incisions</li>
+                                <li>They're free from irritants that could cause discomfort during healing</li>
+                            </ul>
+                            <p>Many new mothers use our Night Wear pads for the first few weeks postpartum when bleeding is heaviest.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I use FloCare with PCOS or fibroids?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! FloCare was specifically designed with these conditions in mind:</p>
+                            <ul>
+                                <li><strong>For PCOS:</strong> Our pads handle irregular, heavy bleeding common with PCOS</li>
+                                <li><strong>For Fibroids:</strong> The extra absorption manages heavy flow caused by fibroids</li>
+                                <li><strong>Comfort:</strong> Pure cotton reduces irritation during prolonged use</li>
+                                <li><strong>Security:</strong> Extra sticky wings stay in place during active days</li>
+                            </ul>
+                            <p>Many women with these conditions find FloCare provides the reliability they need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ordering & Shipping -->
+            <div class="faq-category">
+                <div class="category-title">
+                    <div class="category-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h2>Ordering & Shipping</h2>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How can I purchase FloCare products?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Currently, FloCare products are available:</p>
+                            <ul>
+                                <li><strong>Online:</strong> Through our website (coming soon!)</li>
+                                <li><strong>Retail Stores:</strong> Select pharmacies and supermarkets</li>
+                                <li><strong>Medical Suppliers:</strong> Through gynecologists and women's health clinics</li>
+                            </ul>
+                            <p>Sign up for our newsletter to be notified when online ordering launches.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer subscription plans?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We'll offer convenient subscription options that allow you to:</p>
+                            <ul>
+                                <li>Schedule regular deliveries based on your cycle</li>
+                                <li>Save 15% on subscription orders</li>
+                                <li>Pause or modify shipments anytime</li>
+                                <li>Combine different products in one delivery</li>
+                            </ul>
+                            <p>Our subscription service will launch with our online store. Use our <a href="periodcalc.html">Period Calculator</a> to estimate how many pads you'll need each cycle.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is your return policy?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Customer satisfaction is our priority. Our return policy includes:</p>
+                            <ul>
+                                <li><strong>30-Day Satisfaction Guarantee:</strong> If you're not satisfied, return unused products within 30 days for a full refund</li>
+                                <li><strong>Defective Products:</strong> We'll replace any defective products at no cost</li>
+                                <li><strong>Hassle-Free Returns:</strong> Simple return process with prepaid shipping labels</li>
+                            </ul>
+                            <p>Due to hygiene reasons, we cannot accept returns on opened product packages.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you ship internationally?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Currently, we ship within the United States and Canada. We're working to expand to other countries soon. Sign up for our newsletter to be notified when we launch in your country.</p>
+                            <p>For international inquiries, please <a href="contact.html">contact us</a> and we'll do our best to accommodate your needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Health & Wellness -->
+            <div class="faq-category">
+                <div class="category-title">
+                    <div class="category-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h2>Health & Wellness</h2>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What should I do if I experience irritation with pads?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>If you experience irritation:</p>
+                            <ul>
+                                <li>Switch to 100% cotton pads like FloCare (synthetics often cause irritation)</li>
+                                <li>Change pads more frequently to reduce moisture</li>
+                                <li>Use fragrance-free products</li>
+                                <li>Wear breathable cotton underwear</li>
+                                <li>Consult a doctor if irritation persists</li>
+                            </ul>
+                            <p>FloCare pads are hypoallergenic and non-irritant, making them ideal for sensitive skin.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How can I manage heavy menstrual flow?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Managing heavy flow involves:</p>
+                            <ul>
+                                <li><strong>Right Products:</strong> Use high-absorption pads like FloCare Night Wear</li>
+                                <li><strong>Frequent Changes:</strong> Change pads every 4-6 hours during heavy days</li>
+                                <li><strong>Track Your Cycle:</strong> Use our <a href="periodcalc.html">Period Calculator</a> to predict heavy days</li>
+                                <li><strong>Diet:</strong> Iron-rich foods to compensate for blood loss</li>
+                                <li><strong>Medical Advice:</strong> Consult a doctor if heavy flow affects your daily life</li>
+                            </ul>
+                            <p>Heavy flow can be a symptom of conditions like fibroids or PCOS, so proper diagnosis is important.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Are FloCare pads environmentally friendly?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We're committed to sustainability:</p>
+                            <ul>
+                                <li><strong>Materials:</strong> 100% biodegradable cotton top layer</li>
+                                <li><strong>Packaging:</strong> Recyclable materials and minimal plastic</li>
+                                <li><strong>Production:</strong> Energy-efficient manufacturing processes</li>
+                                <li><strong>Future Goals:</strong> Developing compostable pads</li>
+                            </ul>
+                            <p>While no disposable pad is completely eco-friendly, we're constantly working to reduce our environmental impact.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can teenagers use FloCare pads?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! FloCare is safe and appropriate for teenagers because:</p>
+                            <ul>
+                                <li>Pure cotton is gentle on sensitive teenage skin</li>
+                                <li>Secure wings prevent leaks during school activities</li>
+                                <li>Different sizes suit varying flow levels</li>
+                                <li>Non-irritant materials reduce discomfort</li>
+                            </ul>
+                            <p>For light flow, our Panty Liners or Day Wear are usually sufficient. For heavier flow (common in teens), Night Wear provides extra protection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Need Help Section -->
+    <section class="need-help">
+        <div class="container">
+            <h2>Still Have Questions?</h2>
+            <p>Can't find the answer you're looking for? Our support team is here to help with any questions about FloCare products, menstrual health, or your order.</p>
+            <a href="contact.html" class="btn btn-primary">
+                <i class="fas fa-envelope"></i> Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h2>Flo<span>Care</span></h2>
+                        </a>
+                    </div>
+                    <p class="footer-text">Easy Flow, Soft Life. FloCare provides premium, comfortable, and reliable sanitary protection for women with special needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> support@flocare.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (800) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness St, Health City</li>
+                    </ul>
+                    <div class="newsletter">
+                        <h4>Stay Updated</h4>
+                        <form id="newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 FloCare. All rights reserved. Designed with <i class="fas fa-heart"></i> for women's wellness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    <script>
+        // FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    // Close all other FAQ items
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== this) {
+                            otherQuestion.classList.remove('active');
+                            otherQuestion.nextElementSibling.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current FAQ item
+                    this.classList.toggle('active');
+                    const answer = this.nextElementSibling;
+                    answer.classList.toggle('active');
+                    
+                    // Smooth scroll to question if it's being opened
+                    if (this.classList.contains('active')) {
+                        setTimeout(() => {
+                            this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }, 300);
+                    }
+                });
+            });
+            
+            // Open first FAQ item by default
+            if (faqQuestions.length > 0) {
+                faqQuestions[0].classList.add('active');
+                faqQuestions[0].nextElementSibling.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

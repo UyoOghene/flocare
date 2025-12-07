@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | FloCare - We're Here to Help</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        .contact-hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            background: linear-gradient(135deg, var(--light-pink) 0%, var(--light-purple) 100%);
+            text-align: center;
+        }
+        
+        .contact-hero h1 {
+            font-size: 3.2rem;
+            color: var(--primary-purple);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-color);
+        }
+        
+        .contact-container {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-form-container {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-methods {
+            margin-bottom: 40px;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .method-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        
+        .method-1 .method-icon {
+            background-color: var(--primary-purple);
+        }
+        
+        .method-2 .method-icon {
+            background-color: var(--primary-green);
+        }
+        
+        .method-3 .method-icon {
+            background-color: var(--baby-pink);
+        }
+        
+        .method-info h3 {
+            color: var(--primary-purple);
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+        
+        .method-info p {
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+        
+        .method-link {
+            color: var(--primary-green);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        
+        .method-link:hover {
+            text-decoration: underline;
+        }
+        
+        .business-hours {
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+            padding: 30px;
+        }
+        
+        .business-hours h3 {
+            color: var(--primary-purple);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .hours-list {
+            list-style: none;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .day {
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+        
+        .time {
+            color: var(--text-light);
+        }
+        
+        .highlight-day {
+            color: var(--primary-purple);
+        }
+        
+        .contact-form-container h2 {
+            color: var(--primary-purple);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .contact-form-container p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+        
+        .contact-form {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-gray);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius-sm);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-purple);
+            box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .btn-block {
+            width: 100%;
+            display: block;
+        }
+        
+        .faq-preview {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .faq-preview h2 {
+            text-align: center;
+            color: var(--primary-purple);
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+        
+        .faq-preview p {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: var(--text-light);
+        }
+        
+        .faq-preview-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .faq-preview-item {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-preview-item h3 {
+            color: var(--primary-purple);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .faq-preview-item p {
+            text-align: left;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+        
+        .faq-preview-link {
+            color: var(--primary-green);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .faq-preview-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .contact-method {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Flo<span>Care</span></h1>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="periodcalc.html" class="nav-link">Period Calculator</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>We're Here to Help</h1>
+            <p>Have questions about FloCare products, menstrual health, or need assistance? Our team is ready to support you. Reach out through any of the methods below.</p>
+        </div>
+    </section>
+
+    <!-- Contact Container -->
+    <section class="contact-container">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-methods">
+                        <div class="contact-method method-1">
+                            <div class="method-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Call Us</h3>
+                                <p>Speak directly with our customer support team</p>
+                                <p><strong>Phone:</strong> +1 (800) 123-4567</p>
+                                <p><strong>Toll-Free:</strong> 1-800-FLO-CARE</p>
+                                <a href="tel:+18001234567" class="method-link">
+                                    <i class="fas fa-phone"></i> Call Now
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method method-2">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Email Us</h3>
+                                <p>Send us an email and we'll respond within 24 hours</p>
+                                <p><strong>General Inquiries:</strong> hello@flocare.com</p>
+                                <p><strong>Customer Support:</strong> support@flocare.com</p>
+                                <p><strong>Partnerships:</strong> partnerships@flocare.com</p>
+                                <a href="mailto:support@flocare.com" class="method-link">
+                                    <i class="fas fa-paper-plane"></i> Send Email
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method method-3">
+                            <div class="method-icon">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Live Chat</h3>
+                                <p>Chat with our support team in real-time</p>
+                                <p><strong>Available:</strong> Mon-Fri, 9AM-6PM EST</p>
+                                <p><strong>Weekends:</strong> 10AM-4PM EST</p>
+                                <button class="method-link" id="startChat">
+                                    <i class="fas fa-comment"></i> Start Chat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="business-hours">
+                        <h3>Business Hours</h3>
+                        <ul class="hours-list">
+                            <li>
+                                <span class="day">Monday - Thursday</span>
+                                <span class="time">9:00 AM - 6:00 PM EST</span>
+                            </li>
+                            <li>
+                                <span class="day">Friday</span>
+                                <span class="time">9:00 AM - 5:00 PM EST</span>
+                            </li>
+                            <li>
+                                <span class="day highlight-day">Saturday</span>
+                                <span class="time">10:00 AM - 4:00 PM EST</span>
+                            </li>
+                            <li>
+                                <span class="day">Sunday</span>
+                                <span class="time">Closed</span>
+                            </li>
+                            <li>
+                                <span class="day">Holidays</span>
+                                <span class="time">Special hours apply</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible. All fields are required unless marked optional.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="product">Product Questions</option>
+                                <option value="order">Order & Shipping</option>
+                                <option value="health">Menstrual Health Advice</option>
+                                <option value="partnership">Partnership Opportunities</option>
+                                <option value="feedback">Feedback & Suggestions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" required placeholder="Please provide details about your inquiry..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Yes, I'd like to receive FloCare newsletters with menstrual health tips and product updates.</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview -->
+    <section class="faq-preview">
+        <div class="container">
+            <h2>Quick Answers to Common Questions</h2>
+            <p>Before contacting us, you might find the answer in our FAQ section</p>
+            
+            <div class="faq-preview-items">
+                <div class="faq-preview-item">
+                    <h3>Which FloCare product is right for me?</h3>
+                    <p>Choosing the right product depends on your flow level and specific needs. Night Wear is best for heavy flow, Day Wear for medium flow, and Panty Liners for light days.</p>
+                    <a href="faq.html#product-questions" class="faq-preview-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="faq-preview-item">
+                    <h3>How often should I change my pad?</h3>
+                    <p>Change frequency depends on your flow: heavy flow every 4-6 hours, medium flow every 6-8 hours, and Night Wear can provide up to 8 hours of overnight protection.</p>
+                    <a href="faq.html#usage-care" class="faq-preview-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="faq-preview-item">
+                    <h3>Are FloCare pads suitable for sensitive skin?</h3>
+                    <p>Yes! FloCare pads are made with 100% pure cotton, which is naturally hypoallergenic, breathable, and non-irritant. They're ideal for women with sensitive skin or allergies.</p>
+                    <a href="faq.html#health-wellness" class="faq-preview-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="faq.html" class="btn btn-outline">
+                    <i class="fas fa-question-circle"></i> View All FAQs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h2>Flo<span>Care</span></h2>
+                        </a>
+                    </div>
+                    <p class="footer-text">Easy Flow, Soft Life. FloCare provides premium, comfortable, and reliable sanitary protection for women with special needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> support@flocare.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (800) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness St, Health City</li>
+                    </ul>
+                    <div class="newsletter">
+                        <h4>Stay Updated</h4>
+                        <form id="newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 FloCare. All rights reserved. Designed with <i class="fas fa-heart"></i> for women's wellness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    <script>
+        // Contact form functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const startChatBtn = document.getElementById('startChat');
+            
+            // Contact form submission
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const firstName = document.getElementById('firstName').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    
+                    // In a real application, you would send this data to a server
+                    // For this demo, we'll just show a confirmation
+                    
+                    // Show success message
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    submitBtn.style.backgroundColor = "var(--primary-green)";
+                    
+                    // Reset form after 2 seconds
+                    setTimeout(() => {
+                        contactForm.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.backgroundColor = "";
+                        
+                        // Show thank you alert
+                        alert(`Thank you ${firstName}! Your message about "${subject}" has been sent. We'll respond to ${email} within 24 hours.`);
+                    }, 2000);
+                });
+            }
+            
+            // Start chat button
+            if (startChatBtn) {
+                startChatBtn.addEventListener('click', function() {
+                    // In a real application, this would open a live chat widget
+                    // For this demo, we'll show a message
+                    
+                    const businessHours = document.querySelector('.business-hours');
+                    const hours = businessHours.querySelectorAll('.hours-list li');
+                    
+                    // Check if we're within business hours (simplified check)
+                    const now = new Date();
+                    const day = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+                    const hour = now.getHours();
+                    
+                    let isOpen = false;
+                    
+                    // Monday-Thursday: 9AM-6PM (9-18)
+                    if (day >= 1 && day <= 4) {
+                        if (hour >= 9 && hour < 18) {
+                            isOpen = true;
+                        }
+                    }
+                    // Friday: 9AM-5PM (9-17)
+                    else if (day === 5) {
+                        if (hour >= 9 && hour < 17) {
+                            isOpen = true;
+                        }
+                    }
+                    // Saturday: 10AM-4PM (10-16)
+                    else if (day === 6) {
+                        if (hour >= 10 && hour < 16) {
+                            isOpen = true;
+                        }
+                    }
+                    
+                    if (isOpen) {
+                        alert("Live chat is available! Our support team will connect with you shortly. Please keep this window open.");
+                        
+                        // Simulate chat connection
+                        setTimeout(() => {
+                            alert("Support Agent: Hello! Thank you for contacting FloCare support. How can I help you today?");
+                        }, 1500);
+                    } else {
+                        alert("Our live chat is currently offline. Our hours are:\n\nMon-Thu: 9AM-6PM EST\nFri: 9AM-5PM EST\nSat: 10AM-4PM EST\n\nPlease send us an email or call during business hours.");
+                    }
+                });
+            }
+            
+            // Add CSS for checkbox
+            const style = document.createElement('style');
+            style.textContent = `
+                .checkbox-group {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 10px;
+                }
+                
+                .checkbox-group input[type="checkbox"] {
+                    width: 20px;
+                    height: 20px;
+                    margin-top: 3px;
+                    flex-shrink: 0;
+                }
+                
+                .checkbox-group label {
+                    font-size: 0.9rem;
+                    color: var(--text-light);
+                    font-weight: normal;
+                    cursor: pointer;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | FloCare - Premium Sanitary Protection</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Flo<span>Care</span></h1>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link active">Products</a></li>
+                    <li class="nav-item"><a href="periodcalc.html" class="nav-link">Period Calculator</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Products Hero -->
+    <section class="products-hero">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Discover our range of premium sanitary pads designed specifically for women with heavy flow, PCOS, fibroids, and postpartum needs. Each product is crafted with care for maximum comfort and protection.</p>
+        </div>
+    </section>
+
+    <!-- Products Container -->
+    <section class="products-container">
+        <div class="container">
+            <!-- Night Wear -->
+            <div class="product-category" id="night">
+                <div class="category-header">
+                    <div class="category-icon night">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h2>Night Wear</h2>
+                    <p>Maximum protection for overnight use and heavy flow days</p>
+                </div>
+                
+                <div class="product-detail-card night">
+                    <div class="product-detail-image">
+                        <div class="product-detail-img-container">
+                            <div class="product-display-large">
+                                <div class="pad-large night-pad-large">
+                                    <div class="wing-large wing-left-large"></div>
+                                    <div class="wing-large wing-right-large"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-detail-content">
+                        <h3>FloCare Night Wear</h3>
+                        <p class="product-description">Our longest pad specifically designed for overnight protection and heavy flow days. With 320mm length and extra absorption capacity, it provides worry-free protection for up to 8 hours.</p>
+                        
+                        <div class="product-specifications">
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-ruler"></i>
+                                </div>
+                                <div class="spec-title">Length:</div>
+                                <div class="spec-value">320mm</div>
+                            </div>
+                            
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                                <div class="spec-title">Quantity:</div>
+                                <div class="spec-value">8 pads per pack</div>
+                            </div>
+                            
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-feather-alt"></i>
+                                </div>
+                                <div class="spec-title">Material:</div>
+                                <div class="spec-value">100% Pure Cotton</div>
+                            </div>
+                            
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="spec-title">Protection:</div>
+                                <div class="spec-value">100% Leak-Free</div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefits-list">
+                            <h4>Key Benefits:</h4>
+                            <ul>
+                                <li>Extra sticky and longer wings for secure fit</li>
+                                <li>Maximum absorption for heavy flow</li>
+                                <li>Soft, breathable pure cotton cover</li>
+                                <li>Non-irritant and hypoallergenic</li>
+                                <li>Designed for overnight use (up to 8 hours)</li>
+                                <li>Ideal for postpartum recovery</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="who-needs">
+                            <p>Perfect for: <span>Heavy flow days, overnight protection, postpartum recovery, women with fibroids or PCOS</span></p>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-primary" id="addToCartNight">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-outline" id="saveForLaterNight">
+                                <i class="far fa-heart"></i> Save for Later
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day Wear -->
+            <div class="product-category" id="day">
+                <div class="category-header">
+                    <div class="category-icon day">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h2>Day Wear</h2>
+                    <p>Comfortable all-day protection for medium to heavy flow</p>
+                </div>
+                
+                <div class="product-detail-card day">
+                    <div class="product-detail-image">
+                        <div class="product-detail-img-container">
+                            <div class="product-display-large">
+                                <div class="pad-large day-pad-large">
+                                    <div class="wing-large wing-left-large"></div>
+                                    <div class="wing-large wing-right-large"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-detail-content">
+                        <h3>FloCare Day Wear</h3>
+                        <p class="product-description">Designed for daily comfort and reliable protection. With 300mm length and excellent absorption, it keeps you fresh and confident throughout your active day.</p>
+                        
+                        <div class="product-specifications">
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-ruler"></i>
+                                </div>
+                                <div class="spec-title">Length:</div>
+                                <div class="spec-value">300mm</div>
+                            </div>
+                            
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                                <div class="spec-title">Quantity:</div>
+                                <div class="spec-value">10 pads per pack</div>
+                            </div>
+                            
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-feather-alt"></i>
+                                </div>
+                                <div class="spec-title">Material:</div>
+                                <div class="spec-value">100% Pure Cotton</div>
+                            </div>
+                            
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="spec-title">Protection:</div>
+                                <div class="spec-value">100% Leak-Free</div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefits-list">
+                            <h4>Key Benefits:</h4>
+                            <ul>
+                                <li>Comfortable for all-day wear</li>
+                                <li>Secure wings prevent shifting</li>
+                                <li>Soft cotton surface prevents irritation</li>
+                                <li>Breathable design reduces moisture</li>
+                                <li>Reliable protection for medium to heavy flow</li>
+                                <li>Discreet and comfortable for active days</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="who-needs">
+                            <p>Perfect for: <span>Daily use, medium to heavy flow, active lifestyle, work or school days</span></p>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-primary" id="addToCartDay">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-outline" id="saveForLaterDay">
+                                <i class="far fa-heart"></i> Save for Later
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panty Liners -->
+            <div class="product-category" id="liner">
+                <div class="category-header">
+                    <div class="category-icon liner">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h2>Panty Liners</h2>
+                    <p>Light protection for everyday freshness and light flow days</p>
+                </div>
+                
+                <div class="product-detail-card liner">
+                    <div class="product-detail-image">
+                        <div class="product-detail-img-container">
+                            <div class="product-display-large">
+                                <div class="pad-large liner-pad-large"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-detail-content">
+                        <h3>FloCare Panty Liners</h3>
+                        <p class="product-description">Ultra-thin and discreet liners for light days, discharge, or as backup protection with tampons or menstrual cups. Made with the same pure cotton quality as our pads.</p>
+                        
+                        <div class="product-specifications">
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-ruler"></i>
+                                </div>
+                                <div class="spec-title">Length:</div>
+                                <div class="spec-value">180mm</div>
+                            </div>
+                            
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                                <div class="spec-title">Quantity:</div>
+                                <div class="spec-value">20 liners per pack</div>
+                            </div>
+                            
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-feather-alt"></i>
+                                </div>
+                                <div class="spec-title">Material:</div>
+                                <div class="spec-value">100% Pure Cotton</div>
+                            </div>
+                            
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="spec-title">Protection:</div>
+                                <div class="spec-value">100% Leak-Free</div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefits-list">
+                            <h4>Key Benefits:</h4>
+                            <ul>
+                                <li>Ultra-thin and discreet</li>
+                                <li>Breathable cotton cover</li>
+                                <li>Perfect for light flow days</li>
+                                <li>Ideal as backup for tampons or cups</li>
+                                <li>Maintains freshness all day</li>
+                                <li>Gentle on sensitive skin</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="who-needs">
+                            <p>Perfect for: <span>Light flow days, everyday freshness, discharge, backup protection, spotting</span></p>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-primary" id="addToCartLiner">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-outline" id="saveForLaterLiner">
+                                <i class="far fa-heart"></i> Save for Later
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2>Product Comparison</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Features</th>
+                        <th>Night Wear</th>
+                        <th>Day Wear</th>
+                        <th>Panty Liners</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-name">Length</td>
+                        <td class="highlight-cell">320mm</td>
+                        <td>300mm</td>
+                        <td>180mm</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Quantity per pack</td>
+                        <td>8 pads</td>
+                        <td>10 pads</td>
+                        <td class="highlight-cell">20 liners</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Best for</td>
+                        <td>Heavy flow, overnight</td>
+                        <td>Medium flow, daily use</td>
+                        <td>Light flow, freshness</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Wear time</td>
+                        <td class="highlight-cell">Up to 8 hours</td>
+                        <td>4-6 hours</td>
+                        <td>3-4 hours</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Absorption level</td>
+                        <td class="highlight-cell">Maximum</td>
+                        <td>High</td>
+                        <td>Light</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Wings</td>
+                        <td class="highlight-cell">Extra long & sticky</td>
+                        <td>Standard wings</td>
+                        <td>No wings</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Ideal for</td>
+                        <td>PCOS, fibroids, postpartum</td>
+                        <td>Regular heavy days</td>
+                        <td>Spotting, light days</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Material</td>
+                        <td colspan="3" class="highlight-cell" style="text-align: center;">100% Pure Cotton (All Products)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FAQ Link -->
+    <section class="faq-link-section">
+        <div class="container">
+            <h3>Have questions about our products?</h3>
+            <p>Visit our FAQ page to learn more about FloCare, how to choose the right product for your needs, and tips for maximum comfort and protection.</p>
+            <a href="faq.html" class="btn btn-primary">
+                <i class="fas fa-question-circle"></i> Visit FAQ Page
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h2>Flo<span>Care</span></h2>
+                        </a>
+                    </div>
+                    <p class="footer-text">Easy Flow, Soft Life. FloCare provides premium, comfortable, and reliable sanitary protection for women with special needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> support@flocare.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (800) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness St, Health City</li>
+                    </ul>
+                    <div class="newsletter">
+                        <h4>Stay Updated</h4>
+                        <form id="newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 FloCare. All rights reserved. Designed with <i class="fas fa-heart"></i> for women's wellness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    <script>
+        // Product page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add to Cart functionality
+            const addToCartButtons = document.querySelectorAll('[id^="addToCart"]');
+            const saveForLaterButtons = document.querySelectorAll('[id^="saveForLater"]');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productType = this.id.replace('addToCart', '');
+                    let productName = '';
+                    
+                    switch(productType) {
+                        case 'Night':
+                            productName = 'Night Wear (320mm)';
+                            break;
+                        case 'Day':
+                            productName = 'Day Wear (300mm)';
+                            break;
+                        case 'Liner':
+                            productName = 'Panty Liners (180mm)';
+                            break;
+                    }
+                    
+                    // Show confirmation
+                    const originalText = this.innerHTML;
+                    this.innerHTML = `<i class="fas fa-check"></i> Added to Cart!`;
+                    this.style.backgroundColor = "var(--primary-green)";
+                    
+                    // In a real application, you would add to cart here
+                    console.log(`Added ${productName} to cart`);
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.style.backgroundColor = "";
+                    }, 2000);
+                });
+            });
+            
+            saveForLaterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productType = this.id.replace('saveForLater', '');
+                    let productName = '';
+                    
+                    switch(productType) {
+                        case 'Night':
+                            productName = 'Night Wear (320mm)';
+                            break;
+                        case 'Day':
+                            productName = 'Day Wear (300mm)';
+                            break;
+                        case 'Liner':
+                            productName = 'Panty Liners (180mm)';
+                            break;
+                    }
+                    
+                    // Show confirmation
+                    const originalText = this.innerHTML;
+                    this.innerHTML = `<i class="fas fa-check"></i> Saved!`;
+                    this.style.color = "var(--white)";
+                    this.style.backgroundColor = "var(--primary-purple)";
+                    this.style.borderColor = "var(--primary-purple)";
+                    
+                    // In a real application, you would save for later here
+                    console.log(`Saved ${productName} for later`);
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.style.color = "";
+                        this.style.backgroundColor = "";
+                        this.style.borderColor = "";
+                    }, 2000);
+                });
+            });
+            
+            // Add CSS for large product displays
+            const style = document.createElement('style');
+            style.textContent = `
+                .product-display-large {
+                    position: relative;
+                    width: 250px;
+                    height: 150px;
+                }
+                
+                .pad-large {
+                    position: absolute;
+                    border-radius: 30px 30px 10px 10px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                    border: 1px solid var(--medium-gray);
+                }
+                
+                .night-pad-large {
+                    width: 220px;
+                    height: 80px;
+                    background-color: var(--white);
+                    top: 35px;
+                    left: 15px;
+                }
+                
+                .day-pad-large {
+                    width: 200px;
+                    height: 70px;
+                    background-color: var(--white);
+                    top: 40px;
+                    left: 25px;
+                }
+                
+                .liner-pad-large {
+                    width: 180px;
+                    height: 50px;
+                    background-color: var(--white);
+                    top: 50px;
+                    left: 35px;
+                    border-radius: 20px 20px 10px 10px;
+                }
+                
+                .wing-large {
+                    position: absolute;
+                    border-radius: 0 0 10px 10px;
+                    background-color: var(--baby-pink);
+                }
+                
+                .wing-left-large, .wing-right-large {
+                    width: 50px;
+                    height: 35px;
+                    top: 70px;
+                }
+                
+                .wing-left-large {
+                    left: 0;
+                    transform: rotate(-15deg);
+                }
+                
+                .wing-right-large {
+                    right: 0;
+                    transform: rotate(15deg);
+                }
+                
+                .liner-pad-large ~ .wing-large {
+                    display: none;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
