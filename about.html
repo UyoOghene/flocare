@@ -5,272 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | FloCare - Easy Flow, Soft Life</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <style>
-        .about-hero {
-            padding-top: 140px;
-            padding-bottom: 80px;
-            background: linear-gradient(135deg, var(--light-purple) 0%, var(--light-green) 100%);
-        }
-        
-        .about-hero .container {
-            text-align: center;
-        }
-        
-        .about-hero h1 {
-            font-size: 3.2rem;
-            color: var(--primary-purple);
-            margin-bottom: 1.5rem;
-        }
-        
-        .about-hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            color: var(--text-color);
-        }
-        
-        .story-section {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-        
-        .story-content {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            margin-bottom: 80px;
-            flex-wrap: wrap;
-        }
-        
-        .story-image {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .story-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .story-text h2 {
-            font-size: 2.5rem;
-            color: var(--primary-purple);
-            margin-bottom: 1.5rem;
-        }
-        
-        .story-text p {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            color: var(--text-color);
-        }
-        
-        .mission-vision {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-        
-        .mission-card, .vision-card {
-            background-color: var(--light-gray);
-            border-radius: var(--border-radius);
-            padding: 40px;
-            text-align: center;
-            box-shadow: var(--shadow);
-        }
-        
-        .mission-card h3, .vision-card h3 {
-            color: var(--primary-purple);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-        
-        .mission-icon, .vision-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
-        }
-        
-        .mission-icon {
-            background-color: var(--light-purple);
-            color: var(--primary-purple);
-        }
-        
-        .vision-icon {
-            background-color: var(--light-green);
-            color: var(--primary-green);
-        }
-        
-        .values-section {
-            padding: 80px 0;
-            background-color: var(--light-gray);
-        }
-        
-        .values-section h2 {
-            text-align: center;
-            color: var(--primary-purple);
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-        }
-        
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .value-card {
-            background-color: var(--white);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        
-        .value-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .value-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
-            color: var(--white);
-        }
-        
-        .value-1 .value-icon {
-            background-color: var(--primary-purple);
-        }
-        
-        .value-2 .value-icon {
-            background-color: var(--primary-green);
-        }
-        
-        .value-3 .value-icon {
-            background-color: var(--baby-pink);
-        }
-        
-        .value-4 .value-icon {
-            background-color: #4FC3F7;
-        }
-        
-        .value-card h3 {
-            margin-bottom: 15px;
-            color: var(--dark-gray);
-        }
-        
-        .team-section {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-        
-        .team-section h2 {
-            text-align: center;
-            color: var(--primary-purple);
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .team-section p {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 50px;
-            color: var(--text-light);
-        }
-        
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .team-member {
-            background-color: var(--white);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-        }
-        
-        .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .member-image {
-            height: 250px;
-            background-color: var(--light-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-purple);
-            font-size: 4rem;
-        }
-        
-        .member-info {
-            padding: 25px;
-        }
-        
-        .member-info h3 {
-            color: var(--primary-purple);
-            margin-bottom: 5px;
-        }
-        
-        .member-role {
-            color: var(--primary-green);
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        
-        .member-desc {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-        
-        .story-image-placeholder {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, var(--light-purple) 0%, var(--light-pink) 100%);
-            border-radius: var(--border-radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-purple);
-            font-size: 1.2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .about-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .story-content {
-                flex-direction: column;
-            }
-            
-            .story-text h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -279,8 +19,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/fllogo.png" alt="">
-
+                        <img src="images/fllogo.png" alt="FloCare Logo">
                     </a>
                 </div>
                 <ul class="nav-menu">
@@ -299,144 +38,178 @@
             </nav>
         </div>
     </header>
-
-    <!-- About Hero -->
-    <section class="about-hero">
-        <div class="container">
-            <h1>Our Story: Redefining Period Care</h1>
-            <p>FloCare was born from a simple yet powerful idea: every woman deserves comfortable, reliable, and thoughtful menstrual care, especially those with special needs like heavy flow, PCOS, fibroids, and postpartum recovery.</p>
+        <!-- New Hero -->
+     <section class="newheroabout">
+        <div class="newhero-text">
+            <img src="/images/fllogo.png" class="newherologo" alt="">
+            <p>Easy Flow, Soft life!</p>
         </div>
-    </section>
+     </section>
+
+
 
     <!-- Our Story -->
     <section class="story-section">
         <div class="container">
-            <div class="story-content">
-                <div class="story-image">
-                    <div class="story-image-placeholder">
-                        <div class="placeholder-content">
-                            <i class="fas fa-heart" style="font-size: 4rem; margin-bottom: 20px;"></i>
-                            <p>Founded with compassion for women's wellness</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="story-text">
-                    <h2>Why FloCare Was Created</h2>
-                    <p>In 2020, our founder, Dr. Sarah Johnson, noticed a gap in the menstrual care market. While working as a gynecologist, she saw countless patients with heavy menstrual bleeding, PCOS, fibroids, and postpartum needs struggling to find pads that truly worked for them.</p>
-                    <p>Standard pads were often insufficient, uncomfortable, or caused irritation. Women were layering pads, changing constantly, and still experiencing leaks and discomfort.</p>
-                    <p>Dr. Johnson assembled a team of women who understood these challenges firsthand. Together, they spent two years researching, testing, and developing FloCare pads with specific features for women with special menstrual needs.</p>
-                    <p>Today, FloCare is more than a product—it's a movement toward better menstrual health, dignity, and comfort for all women.</p>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Our Story</h2>
+                <p class="section-subtitle">From vision to reality: How FloCare was born</p>
             </div>
             
-            <div class="mission-vision">
+            <div class="story-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3>The Inspiration</h3>
+                        <p>Mr. Victor noticed his wife and female friends struggling with inadequate menstrual products, especially during heavy flow days. The search for comfortable, reliable protection began.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3>FloCare is Born</h3>
+                        <p>Together with Mrs. Victor and Miss Uyo, the trio conducted extensive research with women across different age groups to understand their specific needs and challenges.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">Present</div>
+                    <div class="timeline-content">
+                        <h3>Making a Difference</h3>
+                        <p>Today, FloCare provides premium menstrual solutions specifically designed for women with heavy flow, PCOS, fibroids, and postpartum recovery needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-cards">
                 <div class="mission-card">
                     <div class="mission-icon">
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3>Our Mission</h3>
-                    <p>To provide premium, comfortable, and reliable menstrual care products specifically designed for women with heavy flow and special gynecological needs, empowering them to live confidently and comfortably every day of their cycle.</p>
+                    <p>To revolutionize menstrual care by providing products that offer superior comfort, reliability, and protection specifically designed for women's unique needs.</p>
                 </div>
                 
-                <div class="vision-card">
-                    <div class="vision-icon">
+                <div class="mission-card">
+                    <div class="mission-icon">
                         <i class="fas fa-eye"></i>
                     </div>
                     <h3>Our Vision</h3>
-                    <p>To become the leading menstrual care brand trusted by women worldwide for specialized protection, while breaking taboos around women's health and advocating for better menstrual education and accessibility.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Values -->
-    <section class="values-section">
-        <div class="container">
-            <h2>Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card value-1">
-                    <div class="value-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Empathy & Understanding</h3>
-                    <p>We listen to women's experiences and design products that address real challenges, not just market trends.</p>
+                    <p>To become Africa's most trusted menstrual care brand, breaking taboos and empowering women to live confidently every day of their cycle.</p>
                 </div>
                 
-                <div class="value-card value-2">
-                    <div class="value-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Purity & Safety</h3>
-                    <p>We use only 100% pure cotton and non-irritant materials, ensuring our products are safe for sensitive skin.</p>
-                </div>
-                
-                <div class="value-card value-3">
-                    <div class="value-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Reliability & Trust</h3>
-                    <p>We promise 100% leak-free protection with our extra sticky and longer wings, so you can trust FloCare completely.</p>
-                </div>
-                
-                <div class="value-card value-4">
-                    <div class="value-icon">
+                <div class="mission-card">
+                    <div class="mission-icon">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
-                    <h3>Inclusivity & Support</h3>
-                    <p>We create products for all women, with special focus on those with heavy flow, PCOS, fibroids, and postpartum needs.</p>
+                    <h3>Our Promise</h3>
+                    <p>100% comfort, 100% protection, 100% confidence. We stand by our products and the women who trust them.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Team -->
+    <!-- Why FloCare -->
+    <section class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose FloCare?</h2>
+                <p class="section-subtitle">The features that make us different</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Maximum Protection</h3>
+                    <p>Our extra-long pads with secure wings provide 8-hour protection against leaks, even on heaviest days.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Pure Cotton</h3>
+                    <p>100% organic cotton top layer ensures breathability and prevents irritation for sensitive skin.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Designed for You</h3>
+                    <p>Created specifically for women with heavy flow, PCOS, fibroids, and postpartum needs.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community First</h3>
+                    <p>We listen to our community and continuously improve based on real women's feedback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team -->
     <section class="team-section">
         <div class="container">
-            <h2>Meet Our Founders</h2>
-            <p>The passionate women behind FloCare who are changing menstrual care one pad at a time</p>
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Founders</h2>
+                <p class="section-subtitle">The passionate team behind FloCare</p>
+            </div>
             
             <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Mr. Victor</h3>
+                        <p class="member-role">Founder & CEO</p>
+                        <p class="member-desc">Visionary entrepreneur with a passion for women's health. Founded FloCare to solve real problems faced by women in his life.</p>
+                        <div class="member-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Every woman deserves comfort and confidence during her period."</p>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="team-member">
                     <div class="member-image">
                         <i class="fas fa-user-md"></i>
                     </div>
                     <div class="member-info">
-                        <h3>Dr. Sarah Johnson</h3>
-                        <p class="member-role">Founder & CEO</p>
-                        <p class="member-desc">Gynecologist with 15+ years experience specializing in menstrual disorders. Founded FloCare after seeing patients struggle with inadequate menstrual products.</p>
+                        <h3>Mrs. Victor</h3>
+                        <p class="member-role">Co-Founder & Managing Director</p>
+                        <p class="member-desc">Business strategist with experience in healthcare management. Ensures FloCare's operations deliver excellence at every step.</p>
+                        <div class="member-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"We're not just selling products; we're changing lives."</p>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <i class="fas fa-flask"></i>
+                        <i class="fas fa-paint-brush"></i>
                     </div>
                     <div class="member-info">
-                        <h3>Dr. Maya Patel</h3>
-                        <p class="member-role">Chief Product Officer</p>
-                        <p class="member-desc">Materials scientist specializing in feminine hygiene products. Leads our R&D team to create innovative, comfortable, and effective menstrual solutions.</p>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-image">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3>Jessica Williams</h3>
-                        <p class="member-role">Community Director</p>
-                        <p class="member-desc">Leads our community outreach and education initiatives. Creates safe spaces for women to share experiences and learn about menstrual health.</p>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-image">
-                        <i class="fas fa-recycle"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3>Emma Chen</h3>
-                        <p class="member-role">Sustainability Lead</p>
-                        <p class="member-desc">Ensures our products and packaging are environmentally responsible while maintaining the highest quality standards for our customers.</p>
+                        <h3>Miss Uyo</h3>
+                        <p class="member-role">Creative Director</p>
+                        <p class="member-desc">Design expert who ensures FloCare's brand and products are beautiful, functional, and user-friendly.</p>
+                        <div class="member-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Design should solve problems, not just look good. That's our approach at FloCare."</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -445,20 +218,33 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+
+        <div class="footer-decorations">
+            <div class="footer-dot footer-dot-1"></div>
+            <div class="footer-dot footer-dot-2"></div>
+        </div>
+
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <div class="logo">
+                    <div class="footer-logo">
                         <a href="index.html">
-                            <h2>Flo<span>Care</span></h2>
+                            <img class="footer-logopic" src="images/fllogo.png" alt="FloCare Logo">
                         </a>
                     </div>
-                    <p class="footer-text">Easy Flow, Soft Life. FloCare provides premium, comfortable, and reliable sanitary protection for women with special needs.</p>
+                    <p class="footer-text">Easy Flow, Soft Life. FloCare provides premium, comfortable, and reliable sanitary protection for women.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
                 
@@ -485,27 +271,44 @@
                 <div class="footer-col">
                     <h3>Contact Info</h3>
                     <ul class="contact-info">
-                        <li><i class="fas fa-envelope"></i> support@flocare.com</li>
-                        <li><i class="fas fa-phone"></i> +1 (800) 123-4567</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness St, Health City</li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>support@flocare.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+234 (800) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Lagos, Nigeria</span>
+                        </li>
                     </ul>
+                    
                     <div class="newsletter">
                         <h4>Stay Updated</h4>
-                        <form id="newsletter-form">
-                            <input type="email" placeholder="Your email" required>
-                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        <form class="newsletter-form" id="newsletter-form">
+                            <div class="newsletter-input-group">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span>Subscribe</span>
+                                </button>
+                            </div>
+                            <p class="newsletter-note">Get exclusive offers and period care tips</p>
                         </form>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 FloCare. All rights reserved. Designed with <i class="fas fa-heart"></i> for women's wellness.</p>
+                <p>&copy; 2025 FloCare. All rights reserved. Designed with <i class="fas fa-heart"></i> for women's wellness.</p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="js/app.js"></script>
+    <script src="js/about.js"></script>
 </body>
 </html>

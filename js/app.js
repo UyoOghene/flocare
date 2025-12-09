@@ -272,3 +272,185 @@ document.addEventListener("visibilitychange", () => {
         document.body.style.animationPlayState = "running";
     }
 });
+
+// About Page JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate timeline items on scroll
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 200);
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Set initial styles for animation
+    timelineItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(30px)';
+        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        timelineObserver.observe(item);
+    });
+
+    // Animate feature items
+    const featureItems = document.querySelectorAll('.feature-item');
+    
+    const featureObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 150);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    featureItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        featureObserver.observe(item);
+    });
+
+    // Animate mission cards
+    const missionCards = document.querySelectorAll('.mission-card');
+    
+    const missionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 150);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    missionCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        missionObserver.observe(card);
+    });
+
+    // Animate team members
+    const teamMembers = document.querySelectorAll('.team-member');
+    
+    const teamObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 200);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    teamMembers.forEach(member => {
+        member.style.opacity = '0';
+        member.style.transform = 'translateY(30px)';
+        member.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        teamObserver.observe(member);
+    });
+
+    // Logo animation
+    const mainLogo = document.querySelector('.main-logo');
+    if (mainLogo) {
+        mainLogo.addEventListener('mouseenter', function() {
+            this.style.animationPlayState = 'paused';
+            this.style.transform = 'scale(1.1) rotate(5deg)';
+        });
+        
+        mainLogo.addEventListener('mouseleave', function() {
+            this.style.animationPlayState = 'running';
+            this.style.transform = '';
+        });
+    }
+
+    // Add click effect to team member cards
+    teamMembers.forEach(member => {
+        member.addEventListener('click', function() {
+            const quote = this.querySelector('.member-quote');
+            if (quote) {
+                quote.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    quote.style.transform = 'scale(1)';
+                }, 300);
+            }
+        });
+    });
+
+    // Newsletter form submission
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            const email = emailInput.value.trim();
+            
+            if (email) {
+                // Show success message
+                const button = this.querySelector('button');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+                button.style.background = 'linear-gradient(45deg, #4CAF7D, #388E3C)';
+                
+                // Reset form
+                emailInput.value = '';
+                
+                // Show notification
+                showNotification('Thank you for subscribing to FloCare updates!', 'success');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                }, 3000);
+            }
+        });
+    }
+
+    // Notification function
+    function showNotification(message, type = 'success') {
+        const notification = document.createElement('div');
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background: ${type === 'error' ? '#f44336' : 'var(--primary-green)'};
+            color: white;
+            border-radius: 8px;
+            z-index: 10000;
+            animation: slideIn 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            max-width: 300px;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        }, 3000);
+    }
+});
